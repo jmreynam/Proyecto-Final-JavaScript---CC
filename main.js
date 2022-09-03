@@ -33,7 +33,7 @@ function agregaCarrito(prodId) {
     if (enCarro){ 
         carro.map (prod => { 
             if (prod.id === prodId){
-                prod.cant++
+                prod.cant++;
             }
         })
     } else { 
@@ -73,8 +73,9 @@ function eliminarDelCarro(prodId){
     const elimino = carro.find((prod) => prod.id === prodId)
     const ubi = carro.indexOf(elimino)
     elimino.cant--;
-    if (elimino.cant == 0){
+    if (elimino.cant <= 0){
         carro.splice(ubi, 1)
+        elimino.cant++;
     }else{    
     //carro.splice(ubi, 1)
     carro.splice(ubi, 1, elimino)
