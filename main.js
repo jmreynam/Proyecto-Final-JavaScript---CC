@@ -14,7 +14,7 @@ stockProductos.forEach((producto) => {
     div.innerHTML = `
     <img src=${producto.image} alt= "">
     <h3>${producto.name}</h3>
-    <p class="precioProducto">Precio:$ ${producto.price}</p>
+    <p class="precioProducto">Precio: ${moneda(producto.price)}</p>
     <button id="agregar${producto.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
 
     `
@@ -53,7 +53,7 @@ function actualizarCarrito(){
         div.className = ('productoEnCarrito')
         div.innerHTML = `
         <p>${producto.name}</p>
-        <p>Precio:$${producto.price}</p>
+        <p>Precio:${moneda(producto.price)}</p>
         <p>Cantidad: <span id="cantidad">${producto.cant}</span></p>
         <button onclick="eliminarDelCarro(${producto.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
         `
@@ -64,7 +64,8 @@ function actualizarCarrito(){
    
     contadorCarrito.innerText = carro.length 
     
-    Total.innerText = carro.reduce((previusProd, currentProd) => previusProd + currentProd.cant * currentProd.price, 0)
+    Total.innerText = moneda(carro.reduce((previusProd, currentProd) => previusProd + currentProd.cant * currentProd.price, 0))
+
     
 }
 
@@ -111,3 +112,12 @@ vaciarCarro.addEventListener('click', () => {
     vacioCarro();
 
    })
+
+   function moneda(numero) {
+    return new Intl.NumberFormat("es-AR", {
+      maximumSignificantDigits: 2,
+      style: "currency",
+      currency: "ARS",
+    }).format(numero);
+  }
+  
