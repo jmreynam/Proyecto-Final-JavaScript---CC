@@ -82,7 +82,32 @@ function eliminarDelCarro(prodId){
     
 }
 
+function vacioCarro(){
+    swal({
+        title: "¿Estás seguro?",
+        text: "Una vez vaciado el carrito perderá todos los cambios realizados en su compra",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      
+      .then((willDelete) => {
+        if (willDelete) {
+        carro.length=0
+        actualizarCarrito()
+          swal("¡El carrito ha sido vaciado con éxito!", {
+            icon: "success",
+            });
+            
+        } else {
+          swal("Su carrito no ha sido vaciado, puede continuar con su compra.");
+        }
+        });
+   }
+
 vaciarCarro.addEventListener('click', () => {
-    carro.length=0
-    actualizarCarrito()
-})
+   //(carro.length=0
+    //actualizarCarrito()
+    vacioCarro();
+
+   })
