@@ -1,0 +1,51 @@
+let stockProductos = [
+    {
+        id: 1,
+        name: "Notebook Gamer AORUS KD 16GB",
+        price: 497500,
+        image: "images/product-1.jpg",
+        stock: 50,
+        cant: 1,
+      },
+      {
+        id: 2,
+        name: "Notebook ASUS ZenBook UX425 8GB",
+        price: 239000,
+        image: "images/product-2.jpg",
+        stock: 50,
+        cant: 1,
+      },
+      {
+        id: 3,
+        name: "Notebook Asus X515EA 8GB",
+        price: 150000,
+        image: "images/product-3.jpg",
+        stock: 50,
+        cant: 1,
+      },
+      {
+        id: 4,
+        name: "Notebook Gamer Gigabyte G5 KD 16GB",
+        price: 315000,
+        image: "images/product-4.jpg",
+        stock: 50,
+        cant: 1,
+      },
+      {
+        id: 5,
+        name: "Notebook Gamer MSI Katana GF66 16GB",
+        price: 310000,
+        image: "images/product-5.jpg",
+        stock: 50,
+        cant: 1,
+      },
+      {
+        id: 6,
+        name: "Notebook Gamer Acer NITRO 5 16GB",
+        price: 250000,
+        image: "images/product-6.jpg",
+        stock: 50,
+        cant: 1,
+      },
+      
+]

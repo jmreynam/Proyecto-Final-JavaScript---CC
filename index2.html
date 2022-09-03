@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="products.js"></script>
+    <script defer src="ventanacarro.js"></script>
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <header>
+
+        <h1><span>T</span><span>I</span><span>E</span><span>N</span><span>D</span><span>A</span><span> </span><span>O</span><span>N</span><span>L</span><span>I</span><span>N</span><span>E</span></h1>
+       
+       
+        <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+    </header>
+
+
+    <main id="contenedor-productos">
+
+    </main>
+
+    
+    <div class="ventana-contenedor">
+        <div class="ventana-carro">
+            <h3>Carrito de Compras</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                
+            </div>
+            <p class="precioProducto">Precio total: $<span id="Total">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar Carrito</button>
+        </div>
+    </div>
+
+</body>
+</html>
